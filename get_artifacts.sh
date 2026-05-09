@@ -2,8 +2,8 @@
 
 set -Eeuo pipefail
 
-TOKEN="${1:-}"
-VERSION="${2:-}"
+TOKEN="$1"
+VERSION="$2"
 
 OUTPUT_DIR="."
 OUTPUT_FILE="${OUTPUT_DIR}/NapCat.Shell.zip"
@@ -26,7 +26,7 @@ check_args() {
 }
 
 download_release() {
-    local url="https://github.com/NapNeko/NapCatQQ/releases/download/${VERSION}/NapCat.Shell.zip"
+    local url="https://github.com/NapNeko/NapCatQQ/releases/download/$VERSION/NapCat.Shell.zip"
 
     log "Downloading NapCat release..."
     log "Version: ${VERSION}"
